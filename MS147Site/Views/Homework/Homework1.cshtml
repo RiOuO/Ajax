@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<table id="table" class="table table-bordered">
+    <thead>
+        <tr>
+            <td>name</td>
+            <td>workYears</td>
+            <td>salary</td>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section Scripts{
+<script>
+        let emp = {
+            "employees": [
+                { "name": "Tom", "workYears": 3, "salary": 35000 },
+                { "name": "Jack", "workYears": 5, "salary": 40000 },
+                { "name": "Mary", "workYears": 7, "salary": 45000 }
+            ]
+        };
+
+        let datas = emp.employees.map(theEmp => {
+            let { name, workYears, salary } = theEmp;
+
+            return (`<tr>
+                         <td>${name}</td>
+                         <td>${workYears}</td>
+                         <td>${salary}</td>
+                     </tr>`)
+        });
+        
+        $("#table>tbody").append(datas.join(""))
+</script>
+}
