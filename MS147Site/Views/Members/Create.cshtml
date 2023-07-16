@@ -1,0 +1,82 @@
+﻿@model MS147Site.Models.Members
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Members</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" id="name"/>
+                <span asp-validation-for="Name" class="text-danger" id="er"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-for="FileName" class="form-control" />
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FileData" class="control-label"></label>
+                <input asp-for="FileData" class="form-control" />
+                <span asp-validation-for="FileData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        //選擇要操作的元素
+        const name = document.querySelector("#name");
+        //元素增加事件監聽
+        name.addEventListener("blur", () => {
+            //Step 1 創建XMLHttpRequest物件
+            const xhr = new XMLHttpRequest();
+
+            //Step 2 對伺服器發出要求
+            xhr.open("GET", `/Api/CheckAccount?name=${name.value}`);
+            xhr.send();
+
+            //Step 3 接受Response的資料
+            //load表示伺服器已收到資料
+            xhr.addEventListener("load", () => {
+                //接收資料
+                const data = JSON.parse(xhr.responseText);
+                const err = document.querySelector("#er");
+                console.log(data);
+                if(data == null){
+                    //顯示資料
+                    er.innerHTML = "";
+                }
+                else{
+                    er.innerHTML = "資料重複";
+                }
+            })})
+    </script>
+}

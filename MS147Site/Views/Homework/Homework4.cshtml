@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div>
+    <select id="se1"></select>
+    <select id="se2"></select>
+    <select id="se3"></select>
+</div>
+
+@section Scripts{
+    <script>
+       //縣市
+       const xhr = new XMLHttpRequest();
+       const city = document.querySelector("#se1");
+       xhr.open("GET", `/Api/GetCity`);
+       xhr.send();
+
+       xhr.addEventListener("load", () =>{
+            const data = JSON.parse(xhr.responseText);
+            const getCities = data.map(item => {
+                return (`<option value="${item}">${item}</option>`)
+       })
+            city.innerHTML = getCities.join("");
+       })
+       //區域
+       const district=document.querySelector("#se2")
+        city.addEventListener("change", () => {
+            const xhr2 = new XMLHttpRequest();
+            const change = city.value;
+            xhr2.open("GET", `/Api/GetDistricts?districts=${change}`);
+            xhr2.send();
+
+            xhr2.addEventListener("load", () =>{
+                const data2 = JSON.parse(xhr2.responseText);
+                const getDistricts = data2.map(item => {
+                    return (`<option value="${item}">${item}</option>`)
+                })
+                district.innerHTML = getDistricts.join("");
+            }) 
+       })
+       //路
+        const road = document.querySelector("#se3")
+        district.addEventListener("change",()=>{
+            const xhr3 = new XMLHttpRequest();
+            const change = district.value;
+            xhr3.open("GET", `/Api/GetRoad?districts=${change}`);
+            xhr3.send();
+
+            xhr3.addEventListener("load", () => {
+                const data3 = JSON.parse(xhr3.responseText);
+                const getRoad = data3.map(item => {
+                    return (`<option value="${item}">${item}</option>`)
+                })
+                road.innerHTML = getRoad.join("");
+            })
+        })
+
+
+    </script>
+}

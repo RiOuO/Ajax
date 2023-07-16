@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using MS147Site.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<DemoContext>(
+    options => options.UseSqlServer(
+builder.Configuration.GetConnectionString("DemoContext")
+    ));
 
 var app = builder.Build();
 
@@ -22,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Homework}/{action=Homework2}/{id?}");
+    pattern: "{controller=Homework}/{action=Homework4}/{id?}");
 
 app.Run();

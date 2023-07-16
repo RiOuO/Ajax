@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Ajax\\MS147Site\\MS147Site.csproj": {}
+    "D:\\GitHub\\Ajax\\MS147Site\\MS147Site.csproj": {}
   },
   "projects": {
-    "E:\\Ajax\\MS147Site\\MS147Site.csproj": {
+    "D:\\GitHub\\Ajax\\MS147Site\\MS147Site.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Ajax\\MS147Site\\MS147Site.csproj",
+        "projectUniqueName": "D:\\GitHub\\Ajax\\MS147Site\\MS147Site.csproj",
         "projectName": "MS147Site",
-        "projectPath": "E:\\Ajax\\MS147Site\\MS147Site.csproj",
+        "projectPath": "D:\\GitHub\\Ajax\\MS147Site\\MS147Site.csproj",
         "packagesPath": "C:\\Users\\Ri\\.nuget\\packages\\",
-        "outputPath": "E:\\Ajax\\MS147Site\\obj\\",
+        "outputPath": "D:\\GitHub\\Ajax\\MS147Site\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Ri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +44,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MS147Site.Models;
 using System.Diagnostics;
 
@@ -6,16 +7,16 @@ namespace MS147Site.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private DemoContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(DemoContext context)
         {
-            _logger = logger;
+            _context = context;
         }
-
         public IActionResult Index()
         {
-            return View();
+            var cities = _context.Address.Select(x => x.City).Distinct();
+            return Json(cities);
         }
 
         public IActionResult Privacy()
