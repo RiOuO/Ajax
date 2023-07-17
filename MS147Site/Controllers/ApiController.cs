@@ -37,10 +37,10 @@ namespace MS147Site.Controllers
             }
         }
 
-        public IActionResult GetDistricts(string districts)
+        public IActionResult GetDistricts(string city)
         {
             {
-                var district = _context.Address.Where(x=>x.SiteId.Contains(districts)).Select(x => x.SiteId.Substring(3,6)).Distinct();
+                var district = _context.Address.Where(x=>x.SiteId.Contains(city)).Select(x => x.SiteId.Substring(3,6)).Distinct();
                 return Json(district);
             }
         }

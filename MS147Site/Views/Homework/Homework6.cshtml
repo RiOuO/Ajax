@@ -29,7 +29,7 @@
         //區域
         async function CallDistrict() {
             const change = city.value;
-            const re = await fetch(`/Api/GetDistricts?districts=${change}`)
+            const re = await fetch(`/Api/GetDistricts?city=${change}`)
             const data = await re.json();
             const getDistricts = data.map(item => {
                 return (`<option value="${item}">${item}</option>`)
