@@ -1,0 +1,65 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h1>AjaxEvent</h1>
+
+<input type="text" id="input" />
+<button id="Ajaxstart" class="btn btn-primary">AjaxStart</button>
+<button id="Ajaxstop" class="btn btn-warning">AjaxStop</button>
+<img src="~/pic/giphy.gif" id="img1" />
+<div id="div1" class="alert alert-primary mt-3"></div>
+
+@section Scripts{
+    <script>
+        const xhr = new XMLHttpRequest();
+        const Ajaxstart = document.querySelector("#Ajaxstart");
+        const Ajaxstop = document.querySelector("#Ajaxstop");
+        const div = document.querySelector("#div1");
+        const text=document.querySelector("#input");
+        const img = document.querySelector("#img1");
+
+        xhr.addEventListener("loadstart", () => {
+            div.innerHTML+="laodstart"+"</br>";
+            img.style.display="inline";
+        })
+
+        xhr.addEventListener("loadend", () => {
+            div.innerHTML += "loadend" + "</br>";
+            img.style.display = "none";
+        })
+
+        xhr.addEventListener("load", () => {
+            const data = xhr.responseText;
+            div.innerHTML += data + "</br>";
+        })
+
+        xhr.addEventListener("timeout",()=>{
+            div.innerHTML += "連線逾時...</br>";
+        })
+
+        xhr.addEventListener("abort",()=>{
+            div.innerHTML += "已停止程式...</br>"
+        })
+
+        Ajaxstart.addEventListener("click", () => {
+            xhr.open("GET", `/Api/AjaxEvent?name=${text.value}`);
+            xhr.timeout=1500;
+            xhr.send();   
+        })
+
+        Ajaxstop.addEventListener("click", () => {
+            xhr.abort();
+        })
+    </script>
+}
+
+@section Styles{
+    <style>
+    #img1{
+        display:none;
+        height:50px;
+    }
+    </style>
+}

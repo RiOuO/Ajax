@@ -29,5 +29,20 @@ namespace MS147Site.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult AjaxEvent()
+        {
+            return View();
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        public IActionResult Fetch()
+        {
+            return View();
+        }
     }
 }
