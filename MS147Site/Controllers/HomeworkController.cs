@@ -23,5 +23,20 @@ namespace MS147Site.Controllers
         {
             return View();
         }
+
+        public IActionResult Homework5()
+        {
+            return View();
+        }
+
+        public IActionResult Homework6()
+        {
+            return View();
+        }
+
+        public IActionResult Homework7()
+        {
+            return View();
+        }
     }
 }

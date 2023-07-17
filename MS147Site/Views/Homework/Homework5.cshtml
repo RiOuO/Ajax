@@ -1,0 +1,82 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <form name="formData">
+            <div class="mb-3">
+                <label for="InputName" class="form-label">姓名</label>
+                <input type="text" class="form-control" id="InputName" aria-describedby="emailHelp" name="Name">
+                <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+                <label for="InputEmail" class="form-label">電子郵件</label>
+                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" name="Email">
+                <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+                <label for="InputAge" class="form-label">年紀</label>
+                <input type="number" class="form-control" id="InputAge" name="Age">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="forFile">選擇檔案</label>
+                <input type="file" class="form-control" id="forFile" name="file">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
+<div id="div1" class="alert alert-primary mt-3"></div>
+<div>
+    <img id="img1"/>
+</div>
+
+
+
+
+@section Scripts{
+    <script>
+        const submit = document.querySelector("#submit")
+        const div = document.querySelector("#div1")
+        const file = document.querySelector("#forFile")
+        const img = document.querySelector("#img1")
+        submit.addEventListener("click", event => {
+            event.preventDefault();
+
+            const formData = new FormData(document.formData)
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "/Api/Register");
+            xhr.send(formData);
+
+            xhr.addEventListener("load", () => {
+                const data = xhr.responseText;
+                div.innerHTML = data;
+            })
+        })
+
+        $("#forFile").on('change', function(e) {
+            const file = this.files[0];
+            if(onchange==null){
+                $("#img1").attr("src", null);
+            }
+            const fr = new FileReader();
+            fr.onload = function (e) {
+                $("#img1").attr("src", e.target.result);
+            };
+
+            fr.readAsDataURL(file);
+        });
+    </script>
+}
+
+@section Styles{
+    <style>
+        img{
+            width:100px;
+        }
+    </style>
+}

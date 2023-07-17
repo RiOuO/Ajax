@@ -1,0 +1,61 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div>
+    <select id="se1"></select>
+    <select id="se2"></select>
+    <select id="se3"></select>
+</div>
+
+@section Scripts{
+    <script>
+        const city = document.querySelector("#se1");
+        const district = document.querySelector("#se2")
+        const road = document.querySelector("#se3")
+
+        //縣市
+        async function CallCity(){
+            const re = await fetch(`/Api/GetCity`)
+            const data = await re.json();
+            console.log(data)
+            const getCities = data.map(item => {
+                return (`<option value="${item}">${item}</option>`)
+            })
+            city.innerHTML = getCities.join("");
+            CallDistrict()
+        }
+        //區域
+        async function CallDistrict() {
+            const change = city.value;
+            const re = await fetch(`/Api/GetDistricts?districts=${change}`)
+            const data = await re.json();
+            const getDistricts = data.map(item => {
+                return (`<option value="${item}">${item}</option>`)
+            })
+            district.innerHTML = getDistricts.join("");
+            CallRoad()
+        }
+        //路
+        async function CallRoad() {
+            const change = district.value;
+            const re = await fetch(`/Api/GetRoad?districts=${change}`)
+            const data = await re.json();
+            const getRoad = data.map(item => {
+                return (`<option value="${item}">${item}</option>`)
+            })
+            road.innerHTML = getRoad.join("");
+        }
+
+        CallCity();
+
+        city.addEventListener("change",()=>{
+            CallDistrict()
+        })
+
+        district.addEventListener("change",()=> {
+            CallRoad()
+        })
+    </script>
+}

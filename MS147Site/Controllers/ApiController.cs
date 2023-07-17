@@ -93,5 +93,24 @@ namespace MS147Site.Controllers
 
             return File(img, "image/jpeg");
         }
+
+        public IActionResult GetImg(IFormFile file)
+        {
+            byte[]? st = null;
+            using (var memory = new MemoryStream())
+            {
+                file.CopyTo(memory);
+                st = memory.ToArray();
+            }
+
+            return File(st, "image/jpeg");
+        }
+
+        public IActionResult GetName()
+        {
+            var getName = _context.Members.Select(x=>x.Name);
+
+            return Json(getName);
+        }
     }
 }

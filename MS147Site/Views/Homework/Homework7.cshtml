@@ -1,0 +1,28 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<input type="text" id="text"/>
+@*<li id="in">
+
+</li>*@
+
+
+@section Scripts{
+    <script>
+        const text = document.querySelector("#text")
+        async function getName() {
+            const re = await fetch(`/Api/GetName`)
+            const data = await re.json();
+            console.log(data)
+            $("#text").autocomplete({
+                source: data
+            });
+        }
+
+        $(function (){
+            getName()
+        });
+    </script>
+}
