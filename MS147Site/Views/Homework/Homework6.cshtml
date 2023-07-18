@@ -17,7 +17,7 @@
 
         //縣市
         async function CallCity(){
-            const re = await fetch(`/Api/GetCity`)
+            const re = await fetch(`@Url.Content("~/Api/GetCity")`)
             const data = await re.json();
             console.log(data)
             const getCities = data.map(item => {
@@ -29,7 +29,7 @@
         //區域
         async function CallDistrict() {
             const change = city.value;
-            const re = await fetch(`/Api/GetDistricts?city=${change}`)
+            const re = await fetch(`@Url.Content("~/Api/GetDistricts?city=")${change}`)
             const data = await re.json();
             const getDistricts = data.map(item => {
                 return (`<option value="${item}">${item}</option>`)
@@ -40,7 +40,7 @@
         //路
         async function CallRoad() {
             const change = district.value;
-            const re = await fetch(`/Api/GetRoad?districts=${change}`)
+            const re = await fetch(`@Url.Content("~/Api/GetRoad?districts=")${change}`)
             const data = await re.json();
             const getRoad = data.map(item => {
                 return (`<option value="${item}">${item}</option>`)

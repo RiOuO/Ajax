@@ -13,12 +13,17 @@ namespace MS147Site.Controllers
             _context = context;
             _host = host;
         }
-        public IActionResult Index()
+        public IActionResult Index(string name,int age=20)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                name = "Guest";
+            }
+
             //return Content("Hi");
             //return Content("<H1>Hi</H1>","text/html");
             //return Content("<H1>你好挖</H1>", "text/html",System.Text.Encoding.UTF8);
-            return Content("Hello Ajax");
+            return Content($"Hello {name}, You are {age} years old.");
         }
 
         public IActionResult CheckAccount(string name)
@@ -111,6 +116,13 @@ namespace MS147Site.Controllers
             var getName = _context.Members.Select(x=>x.Name);
 
             return Json(getName);
+        }
+
+        public IActionResult Partial1()
+        {
+            {
+                return PartialView();
+            }
         }
     }
 }

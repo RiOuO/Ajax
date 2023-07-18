@@ -38,19 +38,29 @@
     <script>
         const submit = document.querySelector("#submit")
         const div = document.querySelector("#div1")
-        submit.addEventListener("click",event=>{
+        submit.addEventListener("click",async(event)=>{
             event.preventDefault();
 
             const formData = new FormData(document.formData)
-            const xhr=new XMLHttpRequest();
-            xhr.open("POST", "/Api/Register");
-            //xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-            xhr.send(formData);
+            const re = await fetch('@Url.Content("~/Api/Register")', {
+                body: formData,
+                method:'POST'
+            });
 
-            xhr.addEventListener("load",()=>{
-                const data=xhr.responseText;
-                div.innerHTML=data;
-            })
+
+            const data=await re.text();
+            div.innerHTML=data;
+
+            
+            //const xhr=new XMLHttpRequest();
+            //xhr.open("POST", "/Api/Register");
+            ////xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            //xhr.send(formData);
+
+            //xhr.addEventListener("load",()=>{
+            //    const data=xhr.responseText;
+            //    div.innerHTML=data;
+            //})
         })
     </script>
 }

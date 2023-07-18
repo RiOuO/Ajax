@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "jQuery";
+}
+
+<h1>jQuery</h1>
+<button id="buttonGet" class="btn btn-primary">get</button>
+<button id="buttonPost" class="btn btn-secondary">post</button>
+<button id="buttonJson" class="btn btn-success">getJson</button>
+<button id="buttonLoad" class="btn btn-info">load</button>
+<button id="buttonAjax" class="btn btn-warning">ajax</button>
+<button id="buttonCors" class="btn btn-danger">cors</button>
+<div class="alert alert-dark mt-3 w-50" role="alert" id="divAlert">
+
+</div>
+@section Scripts{
+    <script>
+        $('#buttonGet').click(function () {
+            $.get('@Url.Content("~/Api/Index")',{"name":"Benson","age":29},function(data){
+                $('#divAlert').text(data)
+            })
+            
+        })
+        $('#buttonPost').click(function () {
+            $.post('@Url.Content("~/Api/Index")', { "name": "Benson", "age": 29 }, function (data) {
+                $('#divAlert').text(data)
+            })
+        })
+        $('#buttonJson').click(function () {
+            $.getJSON('@Url.Content("~/Api/GetCity")',function(data){
+                $.each(data,function(index,city){
+                    console.log(city);
+                })
+            })
+        })
+        $('#buttonLoad').click(function () {
+            $('#divAlert').load('@Url.Content("~/Api/Partial1")')
+        })
+        $('#buttonAjax').click(function () {
+            $.ajax({
+             url:'@Url.Content("~/Api/GetDistricts")',
+             type:"POST",
+             data:{"city":"新北市"},
+             dataType:"json"
+            }).done(data=>{
+                console.log(data);
+            })
+        })
+        $('#buttonCors').click(function () {
+
+            $.get('https://localhost:7192/api/Shippers', function (data) {
+                console.log(data);
+            })
+        })
+
+    </script>
+}

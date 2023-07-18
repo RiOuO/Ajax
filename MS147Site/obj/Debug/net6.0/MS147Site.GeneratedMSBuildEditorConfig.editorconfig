@@ -9,97 +9,117 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MS147Site
 build_property.RootNamespace = MS147Site
-build_property.ProjectDir = D:\GitHub\Ajax\MS147Site\
+build_property.ProjectDir = C:\GitHub\Ajax\MS147Site\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\GitHub\Ajax\MS147Site
+build_property.MSBuildProjectDirectory = C:\GitHub\Ajax\MS147Site
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Homework/Homework1.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Api/Partial1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBpXFBhcnRpYWwxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Ajax/MS147Site/Views/Homework/Homework1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXdvcmtcSG9tZXdvcmsxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Homework/Homework2.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Homework/Homework2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXdvcmtcSG9tZXdvcmsyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Homework/Homework3.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Homework/Homework3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXdvcmtcSG9tZXdvcmszLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Homework/Homework4.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Homework/Homework4.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXdvcmtcSG9tZXdvcms0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Homework/Homework5.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Homework/Homework5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXdvcmtcSG9tZXdvcms1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Homework/Homework6.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Homework/Homework6.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXdvcmtcSG9tZXdvcms2LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Homework/Homework7.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Homework/Homework7.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXdvcmtcSG9tZXdvcms3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Home/AjaxEvent.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Home/AjaxEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBamF4RXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Home/Fetch.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Home/Fetch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGZXRjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Home/Index.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Home/History.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Ajax/MS147Site/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Home/Privacy.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Home/jQuery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxqUXVlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Ajax/MS147Site/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Home/Register.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Members/Create.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Home/ShipperCors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGlwcGVyQ29ycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Ajax/MS147Site/Views/Home/ShipperCorsEmpty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGlwcGVyQ29yc0VtcHR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Ajax/MS147Site/Views/Members/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Members/Delete.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Members/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Members/Details.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Members/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Members/Edit.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Members/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Members/Index.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Members/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Shared/Error.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/_ViewImports.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/_ViewStart.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Ajax/MS147Site/Views/Shared/_Layout.cshtml]
+[C:/GitHub/Ajax/MS147Site/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xzsdfj41ah

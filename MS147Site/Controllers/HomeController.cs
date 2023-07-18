@@ -44,5 +44,25 @@ namespace MS147Site.Controllers
         {
             return View();
         }
+
+        public IActionResult jQuery()
+        {
+            return View();
+        }
+
+        public IActionResult History()
+        {
+            return View();
+        }
+
+        public IActionResult ShipperCorsEmpty()
+        {
+            return View();
+        }
+
+        public IActionResult ShipperCors()
+        {
+            return View();
+        }
     }
 }
